@@ -29,9 +29,9 @@ ${reset};
 }
 @font-face {
   font-family: 'Dung';
-  src: url('src/assets/fonts/DungGeunMo.woff2') format('woff2'),
-    url('src/assets/fonts/DungGeunMo.woff') format('woff'),
-    url('src/assets/fonts/DungGeunMo.eot') format('eot');
+  src: url('/fonts/DungGeunMo.woff2') format('woff2'),
+    url('/fonts/DungGeunMo.woff') format('woff'),
+    url('/fonts/DungGeunMo.eot') format('eot');
   font-weight: 400;
   font-style: normal;
 }
