@@ -16,11 +16,12 @@ const color = {
   gray5: '#797979',
   gray6: '#5f5f5f',
   gray7: '#4b4b4b',
-  gray8: '#333333',
-  gray9: '#202020',
+  gray8: '#202020',
+  gray9: '#111111',
 }
 
 const border = {
+  sm: `border: 4px solid ${color.gray9}; border-radius: 15px;`,
   md: `border: 5px solid ${color.gray9}; border-radius: 15px;`,
 }
 

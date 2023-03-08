@@ -14,18 +14,19 @@ const BlackBg = styled.div`
   align-items: center;
 
   @media ${({ theme }) => theme.device.mobile} {
-    padding: 1rem;
+    padding: 0;
   }
 `
 
 const ColorBg = styled.div`
+  position: relative;
+  max-width: 1100px;
   width: 100%;
   height: 100%;
   ${({ theme }) => theme.border.md};
   border-color: #000;
+  box-shadow: 5px 5px #000;
   background-color: ${({ theme }) => theme.color.light};
-
-  max-width: 1000px;
 `
 
 const App = () => {

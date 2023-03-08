@@ -1,12 +1,14 @@
-import styled from 'styled-components'
-import User from 'src/assets/icons/user.png'
 import TopBar from 'src/components/TopBar'
+import Folder from 'src/assets/icons/folder.png'
+import Idcard from 'src/assets/icons/idcard.png'
+import Icon from 'src/components/IconContainer'
 
 const Home = () => {
   return (
     <>
       <TopBar />
-      <img src={User} alt="icon" />
+      <Icon icon={Idcard} text="about" top={6} right={2} />
+      <Icon icon={Folder} text="works" top={14} right={2} />
     </>
   )
 }
