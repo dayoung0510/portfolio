@@ -1,11 +1,14 @@
 import styled from 'styled-components'
-
-const Container = styled.div`
-  font-family: 'Dung';
-`
+import User from 'src/assets/icons/user.png'
+import TopBar from 'src/components/TopBar'
 
 const Home = () => {
-  return <Container>Home</Container>
+  return (
+    <>
+      <TopBar />
+      <img src={User} alt="icon" />
+    </>
+  )
 }
 
 export default Home

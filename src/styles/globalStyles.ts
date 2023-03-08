@@ -40,18 +40,19 @@ ${reset};
 html,body{
   width:100%;
   height:100%;
+
+  font-size: 18px;
+
+  @media ${({ theme }) => theme.device.mobile} {
+      font-size: 18px;
+  }
 }
 
 * {
     box-sizing: border-box;
   }
   body {
-    font-size: 36px;
     font-family: "Dung", "Pret", Arial, sans-serif;
-
-    @media ${({ theme }) => theme.device.mobile} {
-      font-size: 18px;
-    }
   }
 
 

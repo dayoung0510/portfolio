@@ -3,11 +3,13 @@ const device = {
   // labtop: '(min-width: 501px) and (max-width: 1300px)',
 }
 
-const myColor = {
+const color = {
   main: '#546de5',
   light: '#778beb',
   deep: '#3146ad',
-  gray1: '#ececec',
+  beige: '#ebe4cd',
+  beige2: '#c0bcab',
+  gray: '#ececec',
   gray2: '#cccccc',
   gray3: '#acacac',
   gray4: '#949494',
@@ -18,9 +20,19 @@ const myColor = {
   gray9: '#202020',
 }
 
+const border = {
+  md: `border: 5px solid ${color.gray9}; border-radius: 15px;`,
+}
+
+const dot = {
+  beige: `background-image: radial-gradient(${color.beige2} 1px, transparent 0); background-size: 10px 10px;`,
+}
+
 export const theme = {
-  myColor,
+  color,
   device,
+  border,
+  dot,
 }
 
 export type Theme = typeof theme
