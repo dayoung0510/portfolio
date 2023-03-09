@@ -10,9 +10,9 @@ const Div = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  background-color: ${({ theme }) => theme.color.beige};
+  background-color: ${({ theme }) => theme.color.beige2};
   ${({ theme }) => theme.border.md};
-  ${({ theme }) => theme.dot.beige};
+  ${({ theme }) => theme.dot.gray};
 `
 
 const LinkContainer = styled.div`
@@ -23,6 +23,7 @@ const LinkContainer = styled.div`
   a {
     text-decoration: none;
     color: ${({ theme }) => theme.color.gray9};
+    ${({ theme }) => theme.border.text};
   }
 `
 
@@ -35,7 +36,7 @@ const Decoration = styled.div`
     height: 1rem;
     ${({ theme }) => theme.border.sm};
     border-radius: 50%;
-    background-color: ${({ theme }) => theme.color.beige2};
+    background-color: ${({ theme }) => theme.color.gray5};
   }
 `
 

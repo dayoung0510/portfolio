@@ -5,6 +5,7 @@ type props = {
   text: string
   top: number
   right: number
+  onClick: () => void
 }
 
 const Div = styled.div`
@@ -12,28 +13,27 @@ const Div = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  cursor:pointer;
+  cursor: pointer;
 
   img {
-    width:100%;
+    width: 100%;
   }
-  
-  position:absolute;
 
+  position: absolute;
 
-  width: 100px;
-  width:${({ theme }) => theme.device.mobile} {
-    75px;
-  }
+  width: 85px;
+  @media ${({ theme }) => theme.device.mobile} {
+    width: 70px;
+  } ;
 `
 const Text = styled.div`
   font-size: 1.2rem;
   margin-top: 0.2rem;
 `
 
-const IconContainer = ({ icon, text, top, right }: props) => {
+const IconContainer = ({ icon, text, top, right, onClick }: props) => {
   return (
-    <Div style={{ top: `${top}rem`, right: `${right}rem` }}>
+    <Div style={{ top: `${top}rem`, right: `${right}rem` }} onClick={onClick}>
       <img src={icon} alt="icon" /> <Text>{text}</Text>
     </Div>
   )

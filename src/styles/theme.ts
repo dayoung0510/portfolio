@@ -1,6 +1,7 @@
+export const mobileSize = 500
+
 const device = {
-  mobile: '(max-width: 500px)',
-  // labtop: '(min-width: 501px) and (max-width: 1300px)',
+  mobile: `(max-width: ${mobileSize}px)`,
 }
 
 const color = {
@@ -23,9 +24,11 @@ const color = {
 const border = {
   sm: `border: 4px solid ${color.gray9}; border-radius: 15px;`,
   md: `border: 5px solid ${color.gray9}; border-radius: 15px;`,
+  text: `text-shadow: 1px 1px ${color.gray}`,
 }
 
 const dot = {
+  gray: `background-image: radial-gradient(${color.gray4} 0.75px, transparent 0); background-size: 5px 5px;`,
   beige: `background-image: radial-gradient(${color.beige2} 1px, transparent 0); background-size: 10px 10px;`,
 }
 
