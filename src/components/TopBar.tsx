@@ -12,7 +12,7 @@ const Div = styled.div`
 
   background-color: ${({ theme }) => theme.color.beige2};
   ${({ theme }) => theme.border.md};
-  ${({ theme }) => theme.dot.gray};
+  ${({ theme }) => theme.bg.dot};
 `
 
 const LinkContainer = styled.div`

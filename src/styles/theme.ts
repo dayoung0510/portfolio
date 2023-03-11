@@ -22,21 +22,21 @@ const color = {
 }
 
 const border = {
-  sm: `border: 4px solid ${color.gray9}; border-radius: 15px;`,
-  md: `border: 5px solid ${color.gray9}; border-radius: 15px;`,
-  text: `text-shadow: 1px 1px ${color.gray}`,
+  sm: `border: 3px solid ${color.gray9}; border-radius: 15px;`,
+  md: `border: 4px solid ${color.gray9}; border-radius: 15px;`,
+  text: `text-shadow: 1px 1px ${color.gray};`,
+  boxShdow: `box-shadow: 4px 4px ${color.gray9};`,
 }
 
-const dot = {
-  gray: `background-image: radial-gradient(${color.gray4} 0.75px, transparent 0); background-size: 5px 5px;`,
-  beige: `background-image: radial-gradient(${color.beige2} 1px, transparent 0); background-size: 10px 10px;`,
+const bg = {
+  dot: `background-image: radial-gradient(${color.gray4} 0.75px, transparent 0); background-size: 5px 5px;`,
 }
 
 export const theme = {
   color,
   device,
   border,
-  dot,
+  bg,
 }
 
 export type Theme = typeof theme

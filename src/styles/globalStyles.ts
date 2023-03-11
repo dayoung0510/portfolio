@@ -62,6 +62,9 @@ html,body{
     border: 0;
     cursor:pointer;
     font-family:'pret';
+    padding: 0;
+    margin:0;
+    background:none;
   }
 
 
