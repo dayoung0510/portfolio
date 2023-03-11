@@ -2,8 +2,6 @@ import styled from 'styled-components'
 import About from 'src/components/About'
 import Works from 'src/components/Works'
 
-import { RiArrowDownSFill, RiArrowUpSFill } from 'react-icons/ri'
-
 export type ContentType = null | 'ABOUT' | 'WORKS'
 
 type Props = {
@@ -92,7 +90,6 @@ const ContentContainer = styled.div`
     width: 20px;
   }
   &::-webkit-scrollbar-thumb {
-    /* border-radius: 5px; */
     border-top: 4px solid ${({ theme }) => theme.color.gray9};
     border-bottom: 4px solid ${({ theme }) => theme.color.gray9};
     border-left: 4px solid ${({ theme }) => theme.color.gray9};
