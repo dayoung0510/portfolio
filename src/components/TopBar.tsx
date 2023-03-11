@@ -10,7 +10,7 @@ const Div = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  background-color: ${({ theme }) => theme.color.beige2};
+  background-color: ${({ theme }) => theme.color.gray2};
   ${({ theme }) => theme.border.md};
   ${({ theme }) => theme.bg.dot};
 `

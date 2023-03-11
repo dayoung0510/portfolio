@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import About from 'src/components/About'
 import Works from 'src/components/Works'
 
+import { RiArrowDownSFill, RiArrowUpSFill } from 'react-icons/ri'
+
 export type ContentType = null | 'ABOUT' | 'WORKS'
 
 type Props = {
@@ -17,10 +19,11 @@ const Div = styled.div`
   background-color: ${({ theme }) => theme.color.beige};
   margin: 0 auto;
   margin-top: -2rem;
-  overflow: scroll;
   position: relative;
   ${({ theme }) => theme.border.md}
   ${({ theme }) => theme.border.boxShdow}
+
+  overflow: auto;
 
   @media ${({ theme }) => theme.device.mobile} {
     width: calc(100% - 2rem);
@@ -29,11 +32,12 @@ const Div = styled.div`
 `
 
 const TopContainer = styled.div`
-  position: relative;
+  position: absolute;
+  width: 100%;
+  height: 2rem;
   display: flex;
   justify-content: space-between;
   border-bottom: 4px solid ${({ theme }) => theme.color.gray9};
-  height: 2rem;
 `
 const XBtn = styled.button`
   ${({ theme }) => theme.border.sm};
@@ -74,6 +78,54 @@ const Hr = styled.hr`
   }
 `
 
+const ContentContainer = styled.div`
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  position: absolute;
+  top: 2rem;
+  width: 100%;
+  height: calc(100% - 2rem);
+  padding: 1rem;
+
+  &::-webkit-scrollbar {
+    width: 20px;
+  }
+  &::-webkit-scrollbar-thumb {
+    /* border-radius: 5px; */
+    border-top: 4px solid ${({ theme }) => theme.color.gray9};
+    border-bottom: 4px solid ${({ theme }) => theme.color.gray9};
+    border-left: 4px solid ${({ theme }) => theme.color.gray9};
+    background: ${({ theme }) => theme.color.gray5};
+  }
+  &::-webkit-scrollbar-track {
+    background-color: ${({ theme }) => theme.color.gray3};
+    border: 4px solid ${({ theme }) => theme.color.gray9};
+    border-right: 0;
+  }
+  ::-webkit-scrollbar-button {
+    display: block;
+    background-color: ${({ theme }) => theme.color.gray3};
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    border-left: 4px solid ${({ theme }) => theme.color.gray9};
+  }
+
+  ::-webkit-scrollbar-button:vertical:start:increment {
+    background-image: url('src/assets/icons/up.png');
+  }
+  ::-webkit-scrollbar-button:vertical:start:decrement {
+    display: none;
+  }
+  ::-webkit-scrollbar-button:vertical:end:increment {
+    display: none;
+  }
+  ::-webkit-scrollbar-button:vertical:end:decrement {
+    background-image: url('src/assets/icons/down.png');
+  }
+`
+
 const Topbar = ({ content, close }: Partial<Props>) => {
   return (
     <TopContainer>
@@ -96,10 +148,10 @@ const Modal = ({ open, close, content }: Props) => {
   return (
     <Div style={{ display: open ? 'block' : 'none' }}>
       <Topbar content={content} close={close} />
-      <div style={{ padding: '1rem' }}>
+      <ContentContainer>
         {content === 'ABOUT' && <About />}
         {content === 'WORKS' && <Works />}
-      </div>
+      </ContentContainer>
     </Div>
   )
 }
