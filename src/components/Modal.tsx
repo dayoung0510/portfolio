@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import About from 'src/components/About'
 import Works from 'src/components/Works'
+import Up from 'src/assets/icons/up.png'
+import Down from 'src/assets/icons/down.png'
 
 export type ContentType = null | 'ABOUT' | 'WORKS'
 
@@ -118,7 +120,7 @@ const ContentContainer = styled.div`
   }
 
   ::-webkit-scrollbar-button:vertical:start:increment {
-    background-image: url('src/assets/icons/up.png');
+    background-image: url(${Up});
   }
   ::-webkit-scrollbar-button:vertical:start:decrement {
     display: none;
@@ -127,7 +129,7 @@ const ContentContainer = styled.div`
     display: none;
   }
   ::-webkit-scrollbar-button:vertical:end:decrement {
-    background-image: url('src/assets/icons/down.png');
+    background-image: url(${Down});
   }
 `
 
