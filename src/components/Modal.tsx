@@ -14,9 +14,9 @@ type Props = {
 
 const Div = styled.div`
   z-index: 9;
-  width: 720px;
+  width: 780px;
   height: calc(100% - 4rem);
-  background-color: ${({ theme }) => theme.color.beige};
+  background-color: ${({ theme }) => theme.color.gray};
   margin: 0 auto;
   margin-top: -2rem;
   position: relative;
@@ -52,7 +52,7 @@ const Hr = styled.hr`
   max-width: 100%;
   box-sizing: border-box;
 
-  color: ${({ theme }) => theme.color.beige2};
+  color: ${({ theme }) => theme.color.gray3};
   background-image: linear-gradient(
     -45deg,
     transparent,
@@ -109,6 +109,7 @@ const ContentContainer = styled.div`
     background-color: ${({ theme }) => theme.color.gray3};
     border: 4px solid ${({ theme }) => theme.color.gray9};
     border-right: 0;
+    ${({ theme }) => theme.bg.dot2}
   }
   ::-webkit-scrollbar-button {
     display: block;

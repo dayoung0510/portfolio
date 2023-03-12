@@ -10,9 +10,9 @@ const Div = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  background-color: ${({ theme }) => theme.color.gray2};
+  background-color: ${({ theme }) => theme.color.gray3};
   ${({ theme }) => theme.border.md};
-  ${({ theme }) => theme.bg.dot};
+  ${({ theme }) => theme.bg.dot2};
 `
 
 const LinkContainer = styled.div`

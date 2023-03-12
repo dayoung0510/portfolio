@@ -27,6 +27,7 @@ const ColorBg = styled.div`
   border-color: #000;
   box-shadow: 5px 5px #000;
   background-color: ${({ theme }) => theme.color.light};
+  ${({ theme }) => theme.bg.dot3}
 `
 
 const App = () => {
