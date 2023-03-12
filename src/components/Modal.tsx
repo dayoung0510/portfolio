@@ -87,7 +87,15 @@ const ContentContainer = styled.div`
   padding: 1rem;
 
   &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    -webkit-overflow-scrolling: touch;
     width: 20px;
+    height: 20px;
+  }
+  &::-webkit-scrollbar:vertical {
+    width: 20px;
+    height: 20px;
+    -webkit-overflow-scrolling: touch;
   }
   &::-webkit-scrollbar-thumb {
     border-top: 4px solid ${({ theme }) => theme.color.gray9};
