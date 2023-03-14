@@ -14,7 +14,7 @@ const color = {
   gray4: '#949494',
   gray5: '#797979',
   gray6: '#5f5f5f',
-  gray7: '#4b4b4b',
+  gray7: '#414141',
   gray8: '#202020',
   gray9: '#111111',
 }
@@ -23,7 +23,6 @@ const border = {
   sm: `border: 3px solid ${color.gray9}; border-radius: 15px;`,
   md: `border: 4px solid ${color.gray9}; border-radius: 15px;`,
   text: `text-shadow: 1px 1px ${color.gray};`,
-  boxShdow: `box-shadow: 4px 4px ${color.gray9};`,
 }
 
 const bg = {

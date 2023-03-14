@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Home from 'src/pages/Home'
 
 const BlackBg = styled.div`
-  background-color: ${({ theme }) => theme.color.gray9};
+  background-color: ${({ theme }) => theme.color.gray8};
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -25,7 +25,7 @@ const ColorBg = styled.div`
   height: 100%;
   ${({ theme }) => theme.border.md};
   border-color: #000;
-  box-shadow: 5px 5px #000;
+  box-shadow: 8px 8px #000;
   background-color: ${({ theme }) => theme.color.light};
   ${({ theme }) => theme.bg.dot3}
 `

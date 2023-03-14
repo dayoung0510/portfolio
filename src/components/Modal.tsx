@@ -14,14 +14,16 @@ type Props = {
 
 const Div = styled.div`
   z-index: 9;
-  width: 780px;
+  min-width: 650px;
+  max-width: 820px;
   height: calc(100% - 4rem);
   background-color: ${({ theme }) => theme.color.gray};
   margin: 0 auto;
   margin-top: -2rem;
   position: relative;
+
+  box-shadow: 8px 8px ${({ theme }) => theme.color.gray9};
   ${({ theme }) => theme.border.md}
-  ${({ theme }) => theme.border.boxShdow}
 
   overflow: auto;
 
@@ -86,7 +88,6 @@ const ContentContainer = styled.div`
   top: 2rem;
   width: 100%;
   height: calc(100% - 2rem);
-  padding: 1rem;
 
   &::-webkit-scrollbar {
     -webkit-appearance: none;
