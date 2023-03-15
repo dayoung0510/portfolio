@@ -14,8 +14,7 @@ type Props = {
 
 const Div = styled.div`
   z-index: 9;
-  min-width: 650px;
-  max-width: 820px;
+  max-width: 860px;
   height: calc(100% - 4rem);
   background-color: ${({ theme }) => theme.color.gray};
   margin: 0 auto;

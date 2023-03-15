@@ -20,7 +20,7 @@ const BlackBg = styled.div`
 
 const ColorBg = styled.div`
   position: relative;
-  max-width: 1100px;
+  max-width: 1200px;
   width: 100%;
   height: 100%;
   ${({ theme }) => theme.border.md};

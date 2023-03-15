@@ -1,13 +1,24 @@
 import styled from 'styled-components'
+import { tabs } from 'src/components/About'
 
 const Container = styled.div`
-  width: 150px;
-  height: 100%;
+  width: 20%;
+  min-height: 100%;
   border-right: 4px solid ${({ theme }) => theme.color.gray9};
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   padding: 1rem;
+
+  @media ${({ theme }) => theme.device.mobile} {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    flex-direction: row;
+    border-right: 0;
+    border-bottom: 4px solid ${({ theme }) => theme.color.gray9};
+    overflow-x: auto;
+  }
 `
 
 const Button = styled.button<{ isCurrent: boolean }>`
@@ -15,6 +26,7 @@ const Button = styled.button<{ isCurrent: boolean }>`
   text-align: left;
   font-size: 1rem;
   padding: 0.25rem;
+  white-space: nowrap;
 
   color: ${(props) => (props.isCurrent ? props.theme.color.gray : 'inherit')};
   background-color: ${(props) => (props.isCurrent ? props.theme.color.gray7 : 'transparent')};
@@ -26,16 +38,7 @@ type Props = {
   handleTab: (value: number) => void
 }
 
-const tabs = [
-  { id: 0, name: '인적사항' },
-  { id: 1, name: '사진' },
-  { id: 2, name: '경력' },
-  { id: 3, name: '스택' },
-  { id: 4, name: '성격' },
-]
-
 const AboutSideTab = ({ tab, handleTab }: Props) => {
-  console.log(tab)
   return (
     <Container>
       {tabs.map((item) => (
