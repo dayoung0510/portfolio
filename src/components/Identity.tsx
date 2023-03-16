@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Photo from 'src/assets/imgs/me2.png'
+import Photo from 'src/assets/imgs/me7.png'
 import useMobile from 'src/hooks/useMobile'
 
 const Container = styled.div`
@@ -15,7 +15,7 @@ const Container = styled.div`
 
   img {
     width: 100%;
-    border: 4px solid ${({ theme }) => theme.color.gray9};
+    /* border: 4px solid ${({ theme }) => theme.color.gray9}; */
   }
   .info {
     font-family: 'Pret';
