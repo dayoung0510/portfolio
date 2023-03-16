@@ -15,6 +15,7 @@ const Container = styled.div`
 
   img {
     width: 100%;
+    border: 4px solid ${({ theme }) => theme.color.gray9};
   }
   .info {
     font-family: 'Pret';

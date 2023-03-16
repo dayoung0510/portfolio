@@ -6,7 +6,7 @@ const device = {
 
 const color = {
   main: '#546de5',
-  light: '#8e9eea',
+  light: '#94a2e8',
   deep: '#3146ad',
   gray: '#dcdcdc',
   gray2: '#dddddd',

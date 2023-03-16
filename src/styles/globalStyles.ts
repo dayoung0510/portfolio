@@ -54,6 +54,7 @@ html,body{
   body {
     font-family: "Dung", "Pret", Arial, sans-serif;
     color:#222;
+    line-height:1.2;
   }
 
 
