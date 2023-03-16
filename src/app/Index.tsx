@@ -26,8 +26,9 @@ const ColorBg = styled.div`
   ${({ theme }) => theme.border.md};
   border-color: #000;
   box-shadow: 8px 8px #000;
-  background-color: ${({ theme }) => theme.color.light};
-  ${({ theme }) => theme.bg.dot3}
+  background-color: ${({ theme }) => theme.color.gray7};
+  background-image: radial-gradient(${({ theme }) => theme.color.main} 0.5px, transparent 0);
+  background-size: 5px 5px;
 `
 
 const App = () => {

@@ -25,8 +25,8 @@ const ContentContainer = styled.div`
 `
 export enum Enum {
   Identity,
-  Experiences,
   Personality,
+  Experiences,
   스택,
 }
 
@@ -50,8 +50,8 @@ const About = () => {
       <AboutSideTab tab={tab} handleTab={(value) => handleTab(value)} />
       <ContentContainer>
         {tab === Enum.Identity && <Identity />}
-        {tab === Enum.Experiences && <Experiences />}
         {tab === Enum.Personality && <Personality />}
+        {tab === Enum.Experiences && <Experiences />}
         {tab === Enum.스택 && <div>스택입니다~</div>}
       </ContentContainer>
     </AboutContainer>

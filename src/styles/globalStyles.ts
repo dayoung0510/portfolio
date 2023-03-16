@@ -8,9 +8,9 @@ ${reset};
 /* fonts */
 @font-face {
   font-family: "Pret";
-  src: url("https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Thin.woff")
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.woff")
     format("woff");
-  font-weight: 100;
+  font-weight: 200;
   font-style: normal;
 }
 @font-face {
@@ -53,6 +53,7 @@ html,body{
   }
   body {
     font-family: "Dung", "Pret", Arial, sans-serif;
+    color:#222;
   }
 
 

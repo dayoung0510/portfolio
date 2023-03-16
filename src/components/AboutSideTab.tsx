@@ -9,6 +9,7 @@ const Container = styled.div`
   flex-direction: column;
   gap: 1.5rem;
   padding: 1rem;
+  background-color: ${({ theme }) => theme.color.gray3};
 
   @media ${({ theme }) => theme.device.mobile} {
     width: 100%;

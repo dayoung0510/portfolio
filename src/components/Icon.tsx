@@ -27,8 +27,10 @@ const Div = styled.div`
   } ;
 `
 const Text = styled.div`
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-top: 0.2rem;
+  color: ${({ theme }) => theme.color.gray};
+  text-shadow: 1px 1px #000;
 `
 
 const IconContainer = ({ icon, text, top, right, onClick }: props) => {
