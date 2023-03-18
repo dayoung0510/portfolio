@@ -14,8 +14,7 @@ const Container = styled.div`
   }
 
   img {
-    width: 100%;
-    /* border: 4px solid ${({ theme }) => theme.color.gray9}; */
+    width: 50%;
   }
   .info {
     font-family: 'Pret';
@@ -25,6 +24,8 @@ const Container = styled.div`
   }
   .photo {
     margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
   }
 `
 const Pill = styled.span`
@@ -36,6 +37,7 @@ const Pill = styled.span`
 
 const Flex = styled.div`
   display: flex;
+  align-items: center;
   .sub {
     color: ${({ theme }) => theme.color.gray5};
     display: inline-block;
@@ -43,12 +45,18 @@ const Flex = styled.div`
     font-weight: 100;
     font-size: 0.6rem;
   }
+  .sub2 {
+    color: ${({ theme }) => theme.color.gray5};
+    font-weight: 100;
+    margin-left: 0.2rem;
+    font-size: 0.8rem;
+  }
   .point {
     background-color: ${({ theme }) => theme.color.light};
   }
 `
 
-const Identity = () => {
+const Profile = () => {
   const { isMobile } = useMobile()
   return (
     <Container>
@@ -57,13 +65,13 @@ const Identity = () => {
           <Pill>이름</Pill>
           <div>김다영</div>
         </Flex>
-        <div>
-          <Pill>거주지</Pill>서울 중구 필동
-        </div>
-        <div>
-          <Pill>이메일</Pill>dayoungkim9105@gmail.com
-        </div>
         <Flex>
+          <Pill>거주지</Pill>서울 중구 필동 <span className="sub2">(충무로)</span>
+        </Flex>
+        <Flex>
+          <Pill>이메일</Pill>dayoungkim9105@gmail.com
+        </Flex>
+        <Flex style={{ alignItems: 'flex-start' }}>
           <Pill>학력</Pill>
           <div>
             {isMobile ? (
@@ -102,4 +110,4 @@ const Identity = () => {
   )
 }
 
-export default Identity
+export default Profile

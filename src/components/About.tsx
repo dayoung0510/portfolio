@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 import AboutSideTab from 'src/components/AboutSideTab'
-import Identity from 'src/components/Identity'
+import Profile from 'src/components/Profile'
 import Experiences from 'src/components/Experiences'
 import Personality from 'src/components/Personality'
 
@@ -24,10 +24,10 @@ const ContentContainer = styled.div`
   }
 `
 export enum Enum {
-  Identity,
-  Personality,
-  Experiences,
-  스택,
+  인적사항,
+  '성격/성향',
+  경험,
+  기술,
 }
 
 export const tabs = [
@@ -49,10 +49,10 @@ const About = () => {
     <AboutContainer>
       <AboutSideTab tab={tab} handleTab={(value) => handleTab(value)} />
       <ContentContainer>
-        {tab === Enum.Identity && <Identity />}
-        {tab === Enum.Personality && <Personality />}
-        {tab === Enum.Experiences && <Experiences />}
-        {tab === Enum.스택 && <div>스택입니다~</div>}
+        {tab === Enum.인적사항 && <Profile />}
+        {tab === Enum['성격/성향'] && <Personality />}
+        {tab === Enum.경험 && <Experiences />}
+        {tab === Enum.기술 && <div>스택입니다~</div>}
       </ContentContainer>
     </AboutContainer>
   )
